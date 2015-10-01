@@ -8,13 +8,13 @@ class StaticPagesController < ApplicationController
     @events_thu = []
     @events_fri = []
     @events_sat = []
-    
-    getEvents();
-    
+
+    # 曜日毎のEventsを取得
+    getWeekEvents();
   end
 
   private
-    def getEvents
+    def getWeekEvents
       for event in @events_all do
         wday = event.start_date_time.wday
 
