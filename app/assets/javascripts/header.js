@@ -19,8 +19,8 @@ HeaderPages = (function() {
     var description = $('#header-description').val();
 
     $.ajax({
-      url: "static_pages/create_event",
-      type: "GET",
+      url: "events",
+      type: "POST",
       data: {
         subject : subject,
         location: location,
