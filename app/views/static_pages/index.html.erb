@@ -35,25 +35,32 @@
           <%= render partial: 'static_pages/common/event_items',locals: { events: @events_all } %>
         </div>
         <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-sun">
-          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Sunday ( 0 )</h2>
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Sunday ( <%= @events_sun.count() %> )</h2>
+          <%= render partial: 'static_pages/common/event_items',locals: { events: @events_sun } %>
         </div>
         <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-mon">
-          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Monday ( 0 )</h2>
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Monday ( <%= @events_mon.count() %> )</h2>
+          <%= render partial: 'static_pages/common/event_items',locals: { events: @events_mon } %>
         </div>
         <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-tue">
-          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Tuesday ( 0 )</h2>
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Tuesday ( <%= @events_tue.count() %> )</h2>
+          <%= render partial: 'static_pages/common/event_items',locals: { events: @events_tue } %>
         </div>
         <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-wed">
-          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Wednesday ( 0 )</h2>
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Wednesday ( <%= @events_wed.count() %> )</h2>
+          <%= render partial: 'static_pages/common/event_items',locals: { events: @events_wed } %>
         </div>
         <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-thu">
-          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Thursday ( 0 )</h2>
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Thursday ( <%= @events_thu.count() %> )</h2>
+          <%= render partial: 'static_pages/common/event_items',locals: { events: @events_thu } %>
         </div>
         <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-fri">
-          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Friday ( 0 )</h2>
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Friday ( <%= @events_fri.count() %> )</h2>
+          <%= render partial: 'static_pages/common/event_items',locals: { events: @events_fri } %>
         </div>
         <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-sat">
-          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Saturday ( 0 )</h2>
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Saturday ( <%= @events_sat.count() %> )</h2>
+          <%= render partial: 'static_pages/common/event_items',locals: { events: @events_sat } %>
         </div>
       </div>
     </nav>
