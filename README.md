@@ -1,5 +1,4 @@
 #rails-week-events
-開発中・・・  
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/tyoshikawa1106/rails-week-events)
 
 ##Home
