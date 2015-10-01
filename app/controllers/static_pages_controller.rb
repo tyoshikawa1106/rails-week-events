@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def index
-    @events_all = Event.all()
+    @events_all = Event.all().where.not(start_date_time: nil).order('start_date_time asc')
     @events_sun = []
     @events_mon = []
     @events_tue = []
@@ -8,10 +8,31 @@ class StaticPagesController < ApplicationController
     @events_thu = []
     @events_fri = []
     @events_sat = []
-
-    for event in @events_all do
-      @events_sun.push(event)
-    end
-
+    
+    getEvents();
+    
   end
+
+  private
+    def getEvents
+      for event in @events_all do
+        wday = event.start_date_time.wday
+
+        if wday === 0
+          @events_sun.push(event)
+        elsif wday === 1
+          @events_mon.push(event)
+        elsif wday === 2
+          @events_tue.push(event)
+        elsif wday === 3
+          @events_wed.push(event)
+        elsif wday === 4
+          @events_thu.push(event)
+        elsif wday === 5
+          @events_fri.push(event)
+        elsif wday === 6
+          @events_sat.push(event)
+        end
+      end
+    end
 end
