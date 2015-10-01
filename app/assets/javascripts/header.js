@@ -14,27 +14,22 @@ HeaderPages = (function() {
   }
 
   HeaderPages.saveEvent = function() {
-    var subject = $('#header-subject').val();
-    var location = $('#header-location').val();
-    var description = $('#header-description').val();
-
     $.ajax({
       url: "events",
       type: "POST",
       data: {
-        subject : subject,
-        location: location,
-        description: description,
+        subject : $('#header-subject').val(),
+        location: $('#header-location').val(),
+        description: $('#header-description').val(),
       },
       dataType: "html",
       success: function(data) {
-        alert("Success!");
+        HeaderPages.closeNewEventModal();
       },
       error: function(data) {
         alert("Error!");
       }
     });
-
   }
 
   return HeaderPages;

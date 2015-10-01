@@ -8,12 +8,11 @@ class EventsController < ApplicationController
       start_date_time: Time.now
     );
     @event.save;
-    render nothing: true
+    redirect_to root_path
   end
 
   def destroy
     Event.find(params[:id]).destroy
-    flash[:success] = "Delete!"
     redirect_to root_path
   end
 end
