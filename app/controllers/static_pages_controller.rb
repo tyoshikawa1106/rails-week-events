@@ -14,6 +14,7 @@ class StaticPagesController < ApplicationController
   end
 
   private
+    # 曜日毎のEventsを取得
     def getWeekEvents
       for event in @events_all do
         wday = event.start_date_time.wday
