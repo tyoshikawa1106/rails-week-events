@@ -1,3 +1,4 @@
+/* Header */
 .fiexd {
   position: fixed;
   z-index: 999;
@@ -25,4 +26,10 @@
 
 .timeline-back-color {
   background-color: rgba(0,0,255,0);
+}
+
+.title-link,
+.title-link:hover {
+  color: #FFF !important;
+  text-decoration: none;
 }
