@@ -1,0 +1,28 @@
+.fiexd {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+
+.application-header {
+  background-color: rgb(75, 202, 129) !important;
+  color: #FFF;
+}
+
+.page-title {
+  background-color: #FFF !important;
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.4);
+}
+
+.header-button {
+  color: #A7B8B1 !important;
+  font-size: 0.8rem;
+}
+
+.content {
+  padding: 140px 0 0 0;
+}
+
+.timeline-back-color {
+  background-color: rgba(0,0,255,0);
+}

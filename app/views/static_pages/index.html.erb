@@ -1,0 +1,61 @@
+<div class="slds">
+  <div class="slds-grid slds-wrap slds-p-horizontal--small">
+    <nav class="slds-col slds-size--1-of-1">
+      <div class="slds-tabs--default">
+        <!-- Tab Menu -->
+        <ul class="slds-tabs--default__nav" role="tablist">
+          <li class="slds-tabs__item slds-text-heading--label slds-active" title="Item One" role="presentation" id="tab-all">
+            <a href="#" role="tab" tabindex="0" aria-selected="true" aria-controls="tab-all" onclick="IndexPages.clickTabAll();">All</a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="Item Three" role="presentation" id="tab-sun">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-sun" onclick="IndexPages.clickTabSun();">Sun</a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="Item Two" role="presentation" id="tab-mon">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-mon" onclick="IndexPages.clickTabMon();">Mon</a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="Item Three" role="presentation" id="tab-tue">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-tue" onclick="IndexPages.clickTabTue();">Tue</a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="Item Three" role="presentation" id="tab-wed">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-wed" onclick="IndexPages.clickTabWed();">Wed</a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="Item Three" role="presentation" id="tab-thu">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-thu" onclick="IndexPages.clickTabThu();">Thu</a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="Item Three" role="presentation" id="tab-fri">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-fri" onclick="IndexPages.clickTabFri();">Fri</a>
+          </li>
+          <li class="slds-tabs__item slds-text-heading--label" title="Item Three" role="presentation" id="tab-sat">
+            <a href="#" role="tab" tabindex="-1" aria-selected="false" aria-controls="tab-sat" onclick="IndexPages.clickTabSat();">Sat</a>
+          </li>
+        </ul>
+        <!-- Content -->
+        <div class="slds-tabs__content slds-show" role="tabpanel" id="content-all">
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">All ( <%= @events_all.count() %> )</h2>
+          <%= render partial: 'static_pages/common/event_items',locals: { events: @events_all } %>
+        </div>
+        <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-sun">
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Sunday ( 0 )</h2>
+        </div>
+        <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-mon">
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Monday ( 0 )</h2>
+        </div>
+        <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-tue">
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Tuesday ( 0 )</h2>
+        </div>
+        <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-wed">
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Wednesday ( 0 )</h2>
+        </div>
+        <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-thu">
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Thursday ( 0 )</h2>
+        </div>
+        <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-fri">
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Friday ( 0 )</h2>
+        </div>
+        <div class="slds-tabs__content slds-hide" role="tabpanel" id="content-sat">
+          <h2 class="slds-text-heading--small slds-m-bottom--small slds-text-align--center">Saturday ( 0 )</h2>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

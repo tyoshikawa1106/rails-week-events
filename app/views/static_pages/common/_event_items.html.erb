@@ -1,0 +1,5 @@
+<ul class="slds-timeline timeline-back-color">
+  <% events.each do |event| %>
+    <%= render partial: 'static_pages/common/event_item',locals: { event: event } %>
+  <% end %>
+</ul>

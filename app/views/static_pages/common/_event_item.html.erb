@@ -1,0 +1,77 @@
+<li class="slds-timeline__item li-mark">
+  <span class="slds-assistive-text">Event</span>
+  <div class="slds-media slds-media--reverse">
+    <div class="slds-media__figure">
+      <div class="slds-timeline__actions">
+        <p class="font-bold">
+          Week
+        </p>
+        <div class="slds-dropdown-trigger">
+          <button class="slds-button slds-button--icon-border-filled" aria-haspopup="true">
+            <!-- Dropdown -->
+            <svg aria-hidden="true" class="slds-button__icon">
+              <use xlink:href="<%= asset_path 'SLDS091/assets/icons/utility-sprite/svg/symbols.svg#switch' %>"></use>
+            </svg>
+            <span class="slds-assistive-text">Show More</span>
+          </button>
+          <div class="slds-dropdown slds-dropdown--right slds-dropdown--actions slds-dropdown--menu">
+            <ul class="slds-dropdown__list" role="menu">
+              <li id="menu-13-0" href="#" class="slds-dropdown__item">
+                <%= link_to 'Edit', '#' %>
+              </li>
+              <li id="menu-14-1" href="#" class="slds-dropdown__item">
+                <%= link_to "Delete", event, method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slds-media__body">
+      <div class="slds-media slds-media--timeline slds-timeline__media--event">
+        <div class="slds-media__figure">
+          <!-- image -->
+          <svg aria-hidden="true" class="slds-icon slds-icon-standard-event slds-timeline__icon">
+            <use xlink:href="<%= asset_path 'SLDS091/assets/icons/standard-sprite/svg/symbols.svg#event' %>"></use>
+          </svg>
+        </div>
+        <div class="slds-media__body font-bold">
+          <p>
+            <%= link_to event.subject, '#' %>
+          </p>
+          <p class="slds-truncate">
+            <ui:outputText value="{!v.event.Description}" />
+          </p>
+          <ul class="slds-list--horizontal slds-text-body--small">
+            <li class="slds-list__item slds-m-right--large">
+              <dl class="slds-dl--inline">
+                <dt class="slds-dl--inline__label">Date:</dt>
+                <dd class="slds-dl--inline__detail">
+                  <% if !event.start_date_time.nil? then %>
+                    <%= link_to event.start_date_time.to_s(:date_time_jp), '#' %>
+                  <% end %>
+                </dd>
+              </dl>
+            </li>
+            <li class="slds-list__item">
+              <dl class="slds-dl--inline">
+                <dt class="slds-dl--inline__label">Location:</dt>
+                <dd class="slds-dl--inline__detail">
+
+                  <%= link_to event.location, '#' %>
+                </dd>
+              </dl>
+            </li>
+          </ul>
+          <dl class="slds-dl--inline slds-text-body--small">
+            <dt class="slds-dl--inline__label">Owner:</dt>
+            <dd class="slds-dl--inline__detail">
+              <%= link_to 'JP', '#' %>
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</li>
