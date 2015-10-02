@@ -5,7 +5,7 @@ class StaticPagesController < ApplicationController
     # クラス変数の初期化
     init()
     # すべてのEvent情報を取得
-    @events_all = getAllEvents()
+    setAllEvents()
     # 今週のEvent情報を取得
     wk_events = getWeekEvents()
     # 曜日毎のEventsに値をセット

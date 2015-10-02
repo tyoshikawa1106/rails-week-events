@@ -6,11 +6,13 @@ HeaderJs = (function() {
   HeaderJs.openNewEventModal = function() {
     $('#new-event-modal').removeClass("slds-hide");
     $('#new-event-modal').addClass("slds-show");
+    return false;
   }
 
   HeaderJs.closeNewEventModal = function() {
     $('#new-event-modal').removeClass("slds-show");
     $('#new-event-modal').addClass("slds-hide");
+    return false;
   }
 
   HeaderJs.saveEvent = function() {
@@ -30,6 +32,8 @@ HeaderJs = (function() {
         alert("Error!");
       }
     });
+
+    return false;
   }
 
   return HeaderJs;

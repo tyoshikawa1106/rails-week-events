@@ -13,11 +13,11 @@ module StaticPagesHelper
   end
 
   # 全てのEvent情報を取得
-  def getAllEvents
-    return Event.all()
-                .where.not(start_date_time: nil)
-                .order('start_date_time desc')
-                .limit(200)
+  def setAllEvents
+    @events_all = Event.all()
+                      .where.not(start_date_time: nil)
+                      .order('start_date_time desc')
+                      .limit(200)
   end
 
   # 今週のEvent情報を取得
