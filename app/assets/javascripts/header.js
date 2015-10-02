@@ -27,6 +27,8 @@ HeaderJs = (function() {
       dataType: "html",
       success: function(data) {
         HeaderJs.closeNewEventModal();
+        location.href="/";
+        return false;
       },
       error: function(data) {
         alert("Error!");

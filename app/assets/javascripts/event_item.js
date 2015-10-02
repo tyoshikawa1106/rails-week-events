@@ -15,27 +15,5 @@ EventItemJs = (function() {
     return false;
   }
 
-  EventItemJs.saveEvent = function() {
-    $.ajax({
-      url: "/events/:id/edit",
-      type: "PUT",
-      data: {
-        id : $('#edit-id').val(),
-        subject : $('#edit-subject').val(),
-        location: $('#edit-location').val(),
-        description: $('#edit-description').val(),
-      },
-      dataType: "html",
-      success: function(data) {
-        HeaderJs.closeNewEventModal();
-      },
-      error: function(data) {
-        alert("Error!");
-      }
-    });
-
-    return false;
-  }
-
   return EventItemJs;
 })();

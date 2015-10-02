@@ -18,13 +18,9 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
 
-  def show
-
-  end
-
   def update
     @event = Event.find(params[:id])
-    if @event.update_attributes(event_edit_params)
+    if @event.update_attributes(event_params)
       flash[:success] = "Event updated"
       redirect_to root_path
     else
@@ -33,7 +29,7 @@ class EventsController < ApplicationController
   end
 
   private
-    def event_edit_params
+    def event_params
       params.require(:event).permit(:subject, :location, :description)
     end
 end
