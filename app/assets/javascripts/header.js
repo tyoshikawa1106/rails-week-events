@@ -1,19 +1,19 @@
-HeaderPages = (function() {
+HeaderJs = (function() {
   "use strict";
 
-  function HeaderPages() {}
+  function HeaderJs() {}
 
-  HeaderPages.openNewEventModal = function() {
+  HeaderJs.openNewEventModal = function() {
     $('#new-event-modal').removeClass("slds-hide");
     $('#new-event-modal').addClass("slds-show");
   }
 
-  HeaderPages.closeNewEventModal = function() {
+  HeaderJs.closeNewEventModal = function() {
     $('#new-event-modal').removeClass("slds-show");
     $('#new-event-modal').addClass("slds-hide");
   }
 
-  HeaderPages.saveEvent = function() {
+  HeaderJs.saveEvent = function() {
     $.ajax({
       url: "events",
       type: "POST",
@@ -24,7 +24,7 @@ HeaderPages = (function() {
       },
       dataType: "html",
       success: function(data) {
-        HeaderPages.closeNewEventModal();
+        HeaderJs.closeNewEventModal();
       },
       error: function(data) {
         alert("Error!");
@@ -32,5 +32,5 @@ HeaderPages = (function() {
     });
   }
 
-  return HeaderPages;
+  return HeaderJs;
 })();

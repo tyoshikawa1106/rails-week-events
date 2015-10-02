@@ -1,7 +1,7 @@
-IndexPages = (function() {
+IndexJs = (function() {
   "use strict";
   
-  function IndexPages() {}
+  function IndexJs() {}
 
   function removeActive() {
     $('#tab-all').removeClass("slds-active");
@@ -32,53 +32,53 @@ IndexPages = (function() {
     $('#content-sat').addClass("slds-hide");
   }
 
-  IndexPages.clickTabAll = function() {
+  IndexJs.clickTabAll = function() {
     removeActive();
     $('#tab-all').addClass("slds-active");
     $('#content-all').addClass("slds-show");
   }
 
-  IndexPages.clickTabSun = function() {
+  IndexJs.clickTabSun = function() {
     removeActive();
     $('#tab-sun').addClass("slds-active");
     $('#content-sun').addClass("slds-show");
   }
 
-  IndexPages.clickTabMon = function() {
+  IndexJs.clickTabMon = function() {
     removeActive();
     $('#tab-mon').addClass("slds-active");
     $('#content-mon').addClass("slds-show");
   }
 
-  IndexPages.clickTabTue = function() {
+  IndexJs.clickTabTue = function() {
     removeActive();
     $('#tab-tue').addClass("slds-active");
     $('#content-tue').addClass("slds-show");
   }
 
-  IndexPages.clickTabWed = function() {
+  IndexJs.clickTabWed = function() {
     removeActive();
     $('#tab-wed').addClass("slds-active");
     $('#content-wed').addClass("slds-show");
   }
 
-  IndexPages.clickTabThu = function() {
+  IndexJs.clickTabThu = function() {
     removeActive();
     $('#tab-thu').addClass("slds-active");
     $('#content-thu').addClass("slds-show");
   }
 
-  IndexPages.clickTabFri = function() {
+  IndexJs.clickTabFri = function() {
     removeActive();
     $('#tab-fri').addClass("slds-active");
     $('#content-fri').addClass("slds-show");
   }
 
-  IndexPages.clickTabSat = function() {
+  IndexJs.clickTabSat = function() {
     removeActive();
     $('#tab-sat').addClass("slds-active");
     $('#content-sat').addClass("slds-show");
   }
 
-  return IndexPages;
+  return IndexJs;
 })();

@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="slds-float--right">
-        <button class="slds-button slds-button--inverse header-button" onclick="HeaderPages.openNewEventModal();">New Event</button>
+        <button class="slds-button slds-button--inverse header-button" onclick="HeaderJs.openNewEventModal();">New Event</button>
       </div>
     </div>
   </div>
@@ -28,7 +28,7 @@
     <div class="slds-modal__container slds-modal--large">
       <div class="slds-modal__header">
         <h2 class="slds-text-heading--medium">New Event</h2>
-        <button class="slds-button slds-modal__close" onclick="HeaderPages.closeNewEventModal();">
+        <button class="slds-button slds-modal__close" onclick="HeaderJs.closeNewEventModal();">
           <svg aria-hidden="true" class="slds-button__icon slds-button__icon--inverse slds-button__icon--large">
             <use xlink:href="<%= asset_path 'SLDS091/assets/icons/action-sprite/svg/symbols.svg#close' %>"></use>
           </svg>
@@ -54,8 +54,8 @@
         </div>
       </div>
       <div class="slds-modal__footer slds-modal__footer--directional">
-        <button class="slds-button slds-button--neutral" onclick="HeaderPages.closeNewEventModal();">Cancel</button>
-        <button class="slds-button slds-button--neutral" onclick="HeaderPages.saveEvent();">Save</button>
+        <button class="slds-button slds-button--neutral" onclick="HeaderJs.closeNewEventModal();">Cancel</button>
+        <button class="slds-button slds-button--neutral" onclick="HeaderJs.saveEvent();">Save</button>
       </div>
     </div>
   </div>
