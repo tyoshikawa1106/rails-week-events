@@ -20,7 +20,7 @@ module StaticPagesHelper
                       .limit(200)
   end
 
-  # 今週のEvent情報を取得
+  # 今週のEvent情報を取得 (日付の範囲指定を追加予定..)
   def getWeekEvents
     return Event.all()
                 .where.not(start_date_time: nil)
